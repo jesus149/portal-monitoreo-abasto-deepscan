@@ -1,0 +1,20 @@
+.mat-list-item {
+  font-size: 1.2em;
+}
+
+a {
+  color: #111111;
+}
+
+mat-list-item:hover {
+  color: blue;
+  background-color: #e6e7e8;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+mat-divider{
+
+  border-top: 5px solid #e6e7e8;
+
+}

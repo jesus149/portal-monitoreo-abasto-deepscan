@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>Monitoreos</h1>
+<div mat-dialog-content>
+    <mat-accordion>
+        <mat-list>
+            <mat-list-item (click)="navegar('fr001Monitoreo1')">1. Réplica de replenishment de RMS v16 - RMS v10.
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item (click)="navegar('fr001Monitoreo2')">2. Borrado de ligas de replenishment y días de
+                generación de pedidos en RMS v10 que se inactivaron en RMS v16.</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item (click)="navegar('fr001Monitoreo3')">3. Valor del SOM de la liga de cobertura contra
+                el SOM de la liga replenishment.</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item (click)="navegar('fr001Monitoreo4')">4. Desactivación/inactivación de liga de
+                cobertura.</mat-list-item>
+        </mat-list>
+    </mat-accordion>
+</div>
+<mat-divider></mat-divider>
+<div mat-dialog-actions>
+    <button mat-raised-button color="primary" mat-dialog-close>Cerrar</button>
+</div>

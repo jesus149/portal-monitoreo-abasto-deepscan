@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Monitoreos</h1>
+<div mat-dialog-content>
+    <mat-accordion>
+        <mat-list>
+            <mat-list-item (click)="navegar('fr007Monitoreo3')">1. Flujo de información de Ligas Reple R2 de PIEVE a DAS.
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item (click)="navegar('fr007Monitoreo2')">2. Replicas de Ligas Reple R2 de DAS a RMS10.</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item (click)="navegar('fr007Monitoreo1')">3. Flujo de información del SOM de PIEVE a DAS.</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item (click)="navegar('fr007Monitoreo4')">4. Replicas de SOM de DAS a RMS10.</mat-list-item>
+        </mat-list>
+    </mat-accordion>
+</div>
+<mat-divider></mat-divider>
+<div mat-dialog-actions>
+    <button mat-raised-button color="primary" mat-dialog-close>Cerrar</button>
+</div>

@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Monitoreos</h1>
+<div mat-dialog-content>
+    <mat-accordion>
+        <mat-list>
+            <mat-list-item (click)="navegar('fr005Monitoreo1')">1.Replica de informacion de RMS16 a DAS.</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item (click)="navegar('fr005Monitoreo2')">2. Replica de informacion de DAS a RMS10.
+            </mat-list-item>
+        </mat-list>
+    </mat-accordion>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-raised-button color="primary" mat-dialog-close>Cerrar</button>
+</div>

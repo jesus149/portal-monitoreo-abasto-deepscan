@@ -1,0 +1,284 @@
+<div class="row">
+  <div class="col-lg-4 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <i class="fa fa-file-text-o text-success"></i>
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category"></p>
+              <p class="card-title">FR001 - Parámetros de reaprovisionamiento</p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <hr />
+        <button mat-raised-button color="primary" (click)="openDialogfr01()">Ver</button>
+        <!--div class="stats">
+          <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Ver
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list>
+                <mat-list-item routerLink="/fr001Monitoreo1">1. Monitorear la réplica de las ligas replenishment de RMS v16 - RMS v10.</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item routerLink="/fr001Monitoreo2">2. Monitorear el borrado de ligas de replenishment y días de generación de pedidos en RMS v10 que se inactivaron en RMS v16.</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item routerLink="/fr001Monitoreo3">3. Monitorear el valor del SOM de la liga de cobertura contra el SOM de la liga replenishment.</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item routerLink="/fr001Monitoreo4">4. Monitorear la desactivación/inactivación de liga de cobertura.</mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+          </mat-accordion>
+          
+        </div-->
+      </div>
+    </div>
+  </div>
+  <!--div class="col-lg-4 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <i class="fa fa-file-text-o text-success"></i>
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category"></p>
+              <p class="card-title">FR002 - Monitorear flujo de información de la réplica de los atributos de las constantes</p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <hr />
+        <div class="stats">
+          <button mat-raised-button color="primary"  routerLink="/fr002">Ver</button>
+        </div>
+      </div>
+    </div>
+  </div-->
+  <div class="col-lg-4 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <i class="fa fa-file-text-o text-success"></i>
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category"></p>
+              <p class="card-title">FR003 - Información del tiempo entrega de proveedor</p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <hr />
+        <div class="stats">
+          <button mat-raised-button color="primary"  routerLink="/fr003">Ver</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--      -->
+
+<div class="row">
+  <div class="col-lg-4 col-md-6 col-sm-6">
+    <div class="card card-stats" >
+      <div class="card-body">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <i class="fa fa-file-text-o text-success"></i>
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category"></p>
+              <p class="card-title">FR004 - Promociones Abasto</p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <hr />
+        <div class="stats">
+          <button mat-raised-button color="primary"  routerLink="/fr004">Ver</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6 col-sm-6">
+    <div class="card card-stats"  >
+      <div class="card-body">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <i class="fa fa-file-text-o text-success"></i>
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category"></p>
+              <p class="card-title">FR005 - Cambio de Empaque</p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <hr />
+        <button mat-raised-button color="primary" (click)="openDialogfr05()">Ver</button>
+        <!--div class="stats">
+          <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Ver
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list>
+                <mat-list-item routerLink="/fr001Monitoreo1">1. Monitorear la réplica de las ligas replenishment de RMS v16 - RMS v10.</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item routerLink="/fr001Monitoreo2">2. Monitorear el borrado de ligas de replenishment y días de generación de pedidos en RMS v10 que se inactivaron en RMS v16.</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item routerLink="/fr001Monitoreo3">3. Monitorear el valor del SOM de la liga de cobertura contra el SOM de la liga replenishment.</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item routerLink="/fr001Monitoreo4">4. Monitorear la desactivación/inactivación de liga de cobertura.</mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+          </mat-accordion>
+          
+        </div-->
+      </div>
+    </div>
+  </div>
+  <!--div class="col-lg-4 col-md-6 col-sm-6">
+    <div class="card card-stats" routerLink="/impuestos">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <i class="fa fa-file-text-o text-success"></i>
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category"></p>
+              <p class="card-title">FR006 - Monitorear flujo de información del proceso Generación de pedidos mediate rollback</p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <hr />
+        <div class="stats">
+          <i class="fa fa-calendar-o"></i>
+        </div>
+      </div>
+    </div>
+  </div-->
+</div>
+
+<!--      -->
+
+<div class="row">
+  <div class="col-lg-4 col-md-6 col-sm-6">
+    <div class="card card-stats" >
+      <div class="card-body">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <i class="fa fa-file-text-o text-success"></i>
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category"></p>
+              <p class="card-title">FR007 - Creación de Ligas Replenishment R2</p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <hr />
+        <button mat-raised-button color="primary" (click)="openDialogfr07()">Ver</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6 col-sm-6">
+    <div class="card card-stats" >
+      <div class="card-body">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <i class="fa fa-file-text-o text-success"></i>
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category"></p>
+              <p class="card-title">FR008 - Gestión de Cobertura - Recuperación de Ligas</p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <hr />
+        <button mat-raised-button color="primary" (click)="openDialogfr08()">Ver</button>
+      </div>
+    </div>
+  </div>
+  <!--div class="col-lg-4 col-md-6 col-sm-6">
+    <div class="card card-stats" routerLink="/mantenimientoArticulos">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <i class="fa fa-file-text-o text-success"></i>
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category"></p>
+              <p class="card-title">FR009 - Notificar alertas al área de Soporte</p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <hr />
+        <div class="stats">
+          <i class="fa fa-calendar-o"></i> Last day 
+        </div>
+      </div>
+    </div>
+  </div-->
+</div>
+
+<ngx-spinner></ngx-spinner>

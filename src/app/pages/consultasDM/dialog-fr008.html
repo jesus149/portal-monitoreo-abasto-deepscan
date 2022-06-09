@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>Monitoreos</h1>
+<div mat-dialog-content>
+    <mat-accordion>
+        <mat-list>
+            <mat-list-item (click)="navegar('fr008Monitoreo1')">1. Flujo de información de Recuperación de Ligas de PIEVE a DAS.
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item (click)="navegar('fr008Monitoreo2')">2. Réplica de Recuperación de Ligas DAS a RMS10.</mat-list-item>
+            <mat-divider></mat-divider>
+        </mat-list>
+    </mat-accordion>
+</div>
+<mat-divider></mat-divider>
+<div mat-dialog-actions>
+    <button mat-raised-button color="primary" mat-dialog-close>Cerrar</button>
+</div>

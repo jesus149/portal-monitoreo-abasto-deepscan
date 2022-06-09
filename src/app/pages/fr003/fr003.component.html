@@ -1,0 +1,193 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title"> Monitorear flujo de información del tiempo entrega de proveedor</h2>
+            </div>
+            <div class="card-header">
+                <!--section class="example-section">
+                    <label class="example-margin">Filtros:</label>
+                    <mat-radio-group (change)="radioChange($event)">
+                        <mat-radio-button class="example-margin" value="fecha">Fechas</mat-radio-button>
+                        <mat-radio-button class="example-margin" value="idRef">Id Referencia</mat-radio-button>
+                    </mat-radio-group>
+                </section-->
+
+                <br>
+
+                <div class="form-group">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Fecha Inicio</mat-label>
+                        <input matInput [matDatepicker]="fInicio" [(ngModel)]="fechaInicio">
+                        <mat-datepicker-toggle matSuffix [for]="fInicio"></mat-datepicker-toggle>
+                        <mat-datepicker #fInicio></mat-datepicker>
+                    </mat-form-field>
+
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Fecha Fin</mat-label>
+                        <input matInput [matDatepicker]="fFin" [(ngModel)]="fechaFin">
+                        <mat-datepicker-toggle matSuffix [for]="fFin"></mat-datepicker-toggle>
+                        <mat-datepicker #fFin></mat-datepicker>
+                    </mat-form-field>
+
+                    <br>
+                    <mat-hint>{{rangoFechas}} </mat-hint>
+
+                </div>
+
+                <section class="example-section">
+                    <label class="example-margin">Estatus:</label>
+                    <mat-radio-group (change)="radioChangeEstatus($event)">
+                        <mat-radio-button [checked]="true" class="example-margin" value="estatusA">Abierto</mat-radio-button>
+                        <mat-radio-button class="example-margin" value="estatusC">Cerrado</mat-radio-button>
+                    </mat-radio-group>
+                </section>
+
+                <br>
+
+                <div class="form-group">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>ID Ref</mat-label>
+                        <input type="number" matInput placeholder="123456..." [(ngModel)]="idReferencia">
+                    </mat-form-field>
+
+                </div>
+                <div class="row">
+                    <div class="px-1">
+                        <div class="update ml-auto mr-auto">
+                            <button (click)="buscar()" class="btn btn-primary-one btn-round">Ejecutar</button>
+                        </div>
+                    </div>
+                    <div class="px-1">
+                        <div class="update ml-auto mr-auto">
+                            <button class="btn btn-primary-one btn-round" routerLink="/consultasDM">Salir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="card-header">
+                <h2 class="card-title">xxmab_femsa_repl_leadtime_sups_FR003</h2>
+            </div>
+            <div *ngIf='showSpinnerFRLS' class="card-header">
+                <mat-spinner></mat-spinner>
+            </div>
+            <div *ngIf='showComponentsFRLS' class="form-group">
+                <section class="example-section">
+                    <label class="example-margin">Reportes:</label>
+                    <mat-radio-group (change)="radioChangeReportFRLS($event)">
+                        <mat-radio-button class="example-margin" value="pdf">PDF</mat-radio-button>
+                        <mat-radio-button class="example-margin" value="excel">Excel</mat-radio-button>
+                    </mat-radio-group>
+                </section>
+                <br>
+                <div *ngIf='reportPdfFRLS' class="update ml-auto mr-auto">
+                    <button (click)="createPdfFRLS()" class="btn btn-primary-two btn-round">Exportar
+                        PDF</button>
+                </div>
+                <div *ngIf='reportExcelFRLS' class="update ml-auto mr-auto">
+                    <button (click)="exportExcelFRLS()" class="btn btn-primary-two btn-round">Exportar
+                        Excel</button>
+                </div>
+            </div>
+
+            <div *ngIf='alertSuccessFRLS' class="alert alert-success" role="alert">
+                Los datos se encuentran sincronizados en el día de búsqueda !
+            </div>
+            <div *ngIf='alertElementsFRLS' class="alert alert-success" role="alert">
+                Se han encontrado {{numElementsFRLS}} registros !
+                <div *ngIf='hideButtonMostarFRLS' class="update ml-auto mr-auto">
+                    <button (click)="showTableFRLS()" class="btn btn-primary-two btn-round">Mostrar</button>
+                </div>
+            </div>
+            <div *ngIf='alertWarningFRLS' class="alert alert-warning" role="alert">
+                El servicio no se encuentra disponible !
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+
+                    <mat-form-field appearance="standard">
+                        <mat-label>Filtrar</mat-label>
+                        <input matInput (keyup)="applyFilter($event)" placeholder="Filtrar" #input>
+                    </mat-form-field>
+
+                    <br>
+                    <div *ngIf='showComponentsFRLS'>
+                        <button (click)="updateEstatusFRLS()" class="btn btn-primary-one btn-round">Actualizar
+                            Estatus</button>
+                    </div>
+
+                    <div class="mat-elevation-z8">
+                        <table mat-table #SortFRLS="matSort" [dataSource]="dataResponseFRLS" matSort
+                            class="mat-elevation-z8">
+
+                            <!-- Name Column -->
+                            <ng-container matColumnDef="supplier">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header> supplier </th>
+                                <td mat-cell *matCellDef="let element"> {{element.supplier}} </td>
+                            </ng-container>
+
+                            <!-- Position Column -->
+                            <ng-container matColumnDef="store">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header>store</th>
+                                <td mat-cell *matCellDef="let element">{{element.store}}</td>
+                            </ng-container>
+
+                            <!-- Position Column -->
+                            <ng-container matColumnDef="supp_lead_time">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header>supp_lead_time </th>
+                                <td mat-cell *matCellDef="let element"> {{element.supp_lead_time}} </td>
+                            </ng-container>
+
+
+                            <!-- Symbol Column -->
+                            <ng-container matColumnDef="creation_date">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header> creation_date </th>
+                                <td mat-cell *matCellDef="let element"> {{element.creation_date?.substr(0,10)}} </td>
+                            </ng-container>
+
+
+                            <!-- Symbol Column -->
+                            <ng-container matColumnDef="id_ref">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header> id_ref </th>
+                                <td mat-cell *matCellDef="let element"> {{element.id_ref}} </td>
+                            </ng-container>
+
+                            <!-- Position Column -->
+                            <ng-container matColumnDef="last_update_date">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header>last_update_date </th>
+                                <td mat-cell *matCellDef="let element"> {{element.last_update_date}} </td>
+                            </ng-container>
+
+                            <!-- Position Column -->
+                            <ng-container matColumnDef="last_updated_by">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header>last_updated_by </th>
+                                <td mat-cell *matCellDef="let element"> {{element.last_updated_by}} </td>
+                            </ng-container>
+
+                            <!-- Position Column -->
+                            <ng-container matColumnDef="comentarios">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header>comentarios </th>
+                                <td mat-cell *matCellDef="let element"> {{element.comentarios}} </td>
+                            </ng-container>
+
+                            <!-- Position Column -->
+                            <ng-container matColumnDef="estatus">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header>estatus </th>
+                                <td mat-cell *matCellDef="let element"> {{element.estatus}} </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="displayedColumnsFRLS"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumnsFRLS;"></tr>
+                        </table>
+
+                        <mat-paginator #PaginatorFRLS="matPaginator" [pageSizeOptions]="[10, 25, 50]"
+                            showFirstLastButtons></mat-paginator>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ngx-spinner></ngx-spinner>

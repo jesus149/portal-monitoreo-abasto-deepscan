@@ -1,0 +1,13 @@
+.logo {
+  background-color: #c40d15; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#c71a22, #931617, #c71a22);
+}
+
+.sidebar-wrapper {
+  background-color: #c40d15; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#4d4d4d, #404040, #4d4d4d);
+}
+
+.p {
+  color: #ffffff;
+}

@@ -1,0 +1,50 @@
+.separa {
+  margin-right: 15px;
+}
+
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.flujoLink {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.row {
+  margin-right: 5%;
+  margin-left: -15px;
+}
+
+hr {
+  border-top: 25px solid #e6e7e8;
+}
+
+.btn-primary-one {
+  background-image: linear-gradient(#3672ab, #003494);
+  width: 125px;
+}
+
+.btn-primary-two {
+  background-image: linear-gradient(#ea2417, #7e0f18);
+  width: 125px;
+}
+
+td {
+  border-right: 1px solid #e6e7e8 ;
+}
+
+  mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+  }
+  
+  mat-form-field {
+    display: block;
+  }

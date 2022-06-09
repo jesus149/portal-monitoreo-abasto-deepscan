@@ -1,0 +1,57 @@
+.separa {
+  margin-right: 15px;
+}
+
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.flujoLink {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.row {
+  margin-right: 5%;
+  margin-left: -15px;
+}
+
+hr {
+  border-top: 35px solid #e6e7e8;
+}
+
+.btn-primary-one {
+  background-image: linear-gradient(#3672ab, #003494);
+  width: 135px;
+}
+
+.btn-primary-two {
+  background-image: linear-gradient(#ea2417, #7e0f18);
+  width: 125px;
+}
+
+td {
+  border-right: 1px solid #e6e7e8;
+}
+
+.example-margin {
+  margin: 0 10px;
+}
+
+.mat-row:nth-child(even) {
+  background-color: rgb(255, 255, 255);
+}
+
+.mat-row:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.example-full-width {
+  width: 20%;
+}
+
