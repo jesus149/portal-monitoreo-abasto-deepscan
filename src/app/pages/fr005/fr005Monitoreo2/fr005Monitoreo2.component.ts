@@ -160,17 +160,17 @@ export class Fr005Monitoreo2 implements OnInit {
         }
         else {
 
-            var url = '';
+            var urlIS1 = '';
 
             if (this.idReferencia != undefined) {
-                url = environment.urlServices + 'fr005/xxmab_item_supplier_fr005_1/?fechaInicio=' + fInicio + '&fechaFin=' + fFinal + '&idRef=' + this.idReferencia + '&estatusReg=' + estatusBusuqeda;
+                urlIS1 = environment.urlServices + 'fr005/xxmab_item_supplier_fr005_1/?fechaInicio=' + fInicio + '&fechaFin=' + fFinal + '&idRef=' + this.idReferencia + '&estatusReg=' + estatusBusuqeda;
             } else {
-                url = environment.urlServices + 'fr005/xxmab_item_supplier_fr005_1/?fechaInicio=' + fInicio + '&fechaFin=' + fFinal + '&idRef=' + '&estatusReg=' + estatusBusuqeda;
+                urlIS1 = environment.urlServices + 'fr005/xxmab_item_supplier_fr005_1/?fechaInicio=' + fInicio + '&fechaFin=' + fFinal + '&idRef=' + '&estatusReg=' + estatusBusuqeda;
             }
 
             this.showSpinnerIS1 = true;
 
-            this.http.get<any>(url).subscribe(response => {
+            this.http.get<any>(urlIS1).subscribe(response => {
                 console.log(response);
                 if (response['count'] > 0) {
                     this.responseIS1 = response;
@@ -188,17 +188,17 @@ export class Fr005Monitoreo2 implements OnInit {
 
             //Tabla 2
 
-            var url = '';
+            var urlIS2 = '';
 
             if (this.idReferencia != undefined) {
-                url = environment.urlServices + 'fr005/xxmab_item_supplier_fr005_2/?fechaInicio=' + fInicio + '&fechaFin=' + fFinal + '&idRef=' + this.idReferencia + '&estatusReg=' + estatusBusuqeda;
+                urlIS2 = environment.urlServices + 'fr005/xxmab_item_supplier_fr005_2/?fechaInicio=' + fInicio + '&fechaFin=' + fFinal + '&idRef=' + this.idReferencia + '&estatusReg=' + estatusBusuqeda;
             } else {
-                url = environment.urlServices + 'fr005/xxmab_item_supplier_fr005_2/?fechaInicio=' + fInicio + '&fechaFin=' + fFinal + '&idRef=' + '&estatusReg=' + estatusBusuqeda;
+                urlIS2 = environment.urlServices + 'fr005/xxmab_item_supplier_fr005_2/?fechaInicio=' + fInicio + '&fechaFin=' + fFinal + '&idRef=' + '&estatusReg=' + estatusBusuqeda;
             }
 
             this.showSpinnerIS2 = true;
 
-            this.http.get<any>(url).subscribe(response => {
+            this.http.get<any>(urlIS2).subscribe(response => {
                 console.log(response);
                 if (response['count'] > 0) {
                     this.responseIS2 = response;

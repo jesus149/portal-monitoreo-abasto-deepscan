@@ -9,8 +9,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 import { MatRadioChange } from '@angular/material/radio';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { environment } from 'environments/environment';
-import { Fr001Monitoreo1Model } from './../../../models/fr001Monitoreo1.model'
-import { FormGroup, FormControl } from '@angular/forms';
+import { Fr001Monitoreo1Model } from './../../../models/fr001Monitoreo1.model';
 
 import jsPDF from 'jspdf'
 import 'jspdf-autotable'
@@ -158,15 +157,15 @@ export class Fr001Monitoreo1 implements OnInit {
     this.encrypt = localStorage.getItem('encrypt');
 
     this.http.get<any>(environment.urlLogin + 'appId=' + this.appId + '&encrypt=' + this.encrypt + '').subscribe(response => {
-        console.log("todo ok")
-        this.spinner.hide();
+      console.log("todo ok")
+      this.spinner.hide();
     }, err => {
-        console.log("Error: ", err);
-        //const dialogRef = this.dialog.open(DialogContentExampleDialog);
-        this.spinner.hide();
-        this.router.navigate(['/login']);
+      console.log("Error: ", err);
+      //const dialogRef = this.dialog.open(DialogContentExampleDialog);
+      this.spinner.hide();
+      this.router.navigate(['/login']);
     });
-}
+  }
 
   buscar() {
 

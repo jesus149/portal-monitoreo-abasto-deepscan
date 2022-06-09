@@ -63,7 +63,7 @@ export class Login implements OnInit {
                     this.spinner.hide();
                     console.log("Error: ", err);
                     localStorage.clear();
-                    const dialogRef = this.dialog.open(DialogContentExampleDialog);
+                    this.dialog.open(DialogContentExampleDialog);
                 });
             }
             );
@@ -72,7 +72,7 @@ export class Login implements OnInit {
 
 
     async onSubmit(): Promise<void> {
-        this.loginInvalid = false;
+        /*this.loginInvalid = false;
         this.formSubmitAttempt = false;
         if (this.form.valid) {
             try {
@@ -86,7 +86,7 @@ export class Login implements OnInit {
             }
         } else {
             this.formSubmitAttempt = true;
-        }
+        }*/
     }
 
 }
